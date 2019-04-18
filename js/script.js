@@ -63,6 +63,7 @@ function Column(name) {
 Column.prototype = {
     addCard: function(card) {
       this.element.querySelector('ul').appendChild(card.element);
+
     },
     removeColumn: function() {
       this.element.parentNode.removeChild(this.element);
@@ -78,7 +79,12 @@ function Card(description) {
   this.id = randomString();
   this.description = description;
   this.element = generateTemplate('card-template', { description: this.description }, 'li');
-
+ 	if(description.length > 30) {
+      	 this.element.querySelector('.card').classList.add("green");
+      }
+  	if(description.length > 50) {
+  	 this.element.querySelector('.card').classList.add("blue");
+  }
   this.element.querySelector('.card').addEventListener('click', function (event) {
     event.stopPropagation();
 
@@ -126,6 +132,7 @@ board.addColumn(doneColumn);
 // CREATING CARDS
 var card1 = new Card('New task');
 var card2 = new Card('Create kanban boards');
+var card2 = new Card('Kokodżambo');
 
 // ADDING CARDS TO COLUMNS
 todoColumn.addCard(card1);
