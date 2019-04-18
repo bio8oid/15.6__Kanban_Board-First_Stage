@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Baloo|Dokdo|Luckiest+Guy|Monoton|Titan+One|Ubuntu:300,400,700,700i&subset=latin-ext');
+
+$deep-violet: #100e17;
+$light-green: #81ecec;
+$white: #fff;
+$background-grey: #201c29;
+$deep-burgund: #190b14;
+
+$font-family: 'Dokdo', cursive;
+$font-family: 'Ubuntu', sans-serif;
+$font-family: 'Anton', sans-serif;
+$font-family: 'Luckiest Guy', cursive;
+$font-family: 'Monoton', cursive;
+$font-family: 'Baloo', cursive;
+$font-family: 'Titan One', cursive;
+
+@mixin btn {
+	display: block;
+	font-family: 'Baloo', cursive;
+	color : $deep-burgund;
+	height: 60px;
+	border-radius: 10px;
+	border: none;
+	font-size: 20px;
+	text-align: center;
+	background-image: linear-gradient(to bottom, #ef33f2 0%, #3544dc 95%);
+	width: 120px;
+	margin: 30px auto;
+	z-index: 2;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background-image: linear-gradient(to top, #ef33f2 0%, #3544dc 95%);
+	}
+}
+
+body {
+	margin: 20px;
+	font-family: 'Baloo', cursive;
+	background-image: linear-gradient(to bottom left, #17141d, #201c29);
+	border-radius: 30px;
+	box-shadow: 2px 2px 80px $deep-burgund;
+}
+		
+.board {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap: wrap;
+	box-shadow: 30px 30px 80px $deep-burgund;
+	border-radius: 30px;
+	h1 {
+		font-weight: 800;
+		font-size: 100px;
+		line-height: 120px;
+		text-align: center;
+		background: -webkit-linear-gradient(153deg, #3be2bc 0%, #1b96f1 95%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		border-radius: 30px;
+		margin:0;
+	}
+}
+
+.new-column-button {
+	@include btn;
+	font-size: 26px;
+	width: 300px;
+	margin: 50px auto;
+	box-shadow: 20px 20px 50px $deep-burgund;
+	}
+
+.column-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 30px 0;
+	border-radius: 30px;
+	justify-content: center;
+	box-shadow: 30px 30px 80px $deep-burgund;
+}
+
+.column {
+	border-radius: 30px;
+	min-width: 300px;
+	margin: 10px;
+	border-radius: 30px;
+	box-shadow: 30px 30px 80px $deep-burgund;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	h2 {
+		font-size: 42px;
+		background: -webkit-linear-gradient(153deg, #3be2bc 0%, #1b96f1 95%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding:0;
+	}
+}
+
+.card {
+	width: 300px;
+	min-height: 150px;
+	margin:20px;
+	border-radius: 30px;
+	background-image: linear-gradient(to top, #e64c4c 0%, #fb8332 95%);
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-shadow: 30px 30px 80px $deep-burgund;
+}
+
+.card-description {
+	margin: 20px;
+	text-align: center;
+	color: $deep-burgund;
+}
+
+.btn-delete {
+	@include btn;
+	width: 40px;
+	height: 40px;
+	background-image: linear-gradient(to bottom,#190b14,#da1b60);
+	box-shadow: 2px 2px 20px $deep-burgund;
+	color: $white;
+	align-items: flex-end;
+	&:hover {
+		background-image: linear-gradient(to top,#190b14,#da1b60);
+	}
+}
+
+.add-card {
+	@include btn;
+	 box-shadow: 10px 10px 20px $deep-burgund;
+}

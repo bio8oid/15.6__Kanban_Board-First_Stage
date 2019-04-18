@@ -2,16 +2,6 @@
 (function(){ 
 
 document.addEventListener('DOMContentLoaded', function() {
-// ID Generator \\
-
-function randomString() {
-    var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
-    var str = '';
-    for (var i = 0; i < 10; i++) {
-        str += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return str;
-}
 
 // Board \\
 
@@ -24,13 +14,17 @@ var board = {
     element: document.querySelector('#board .column-container')
 };
 
-addColumn: function(column) {
-  this.element.appendChild(column.element);
-  initSortable(column.id); //About this feature we will tell later
+
+	// ID Generator \\
+
+function randomString() {
+    var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
+    var str = '';
+    for (var i = 0; i < 10; i++) {
+        str += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return str;
 }
-
-
-	
 
 
 	// Template Generator \\
@@ -101,9 +95,7 @@ Card.prototype = {
 }
 
 
-	
-
-	// Board \\
+	// Sortable \\
 
 function initSortable(id) {
   var el = document.getElementById(id);
