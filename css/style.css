@@ -119,6 +119,14 @@ body {
   box-shadow: 30px 30px 80px #190b14;
 }
 
+.card.green {
+  background-image: linear-gradient(153deg, #8adc32 0%, #25c7a2 95%);
+}
+
+.card.blue {
+  background-image: linear-gradient(153deg, #8e2ef7 0%, #61dec7 95%);
+}
+
 .card-description {
   margin: 20px;
   text-align: center;
