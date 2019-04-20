@@ -79,10 +79,10 @@ function Card(description) {
   this.id = randomString();
   this.description = description;
   this.element = generateTemplate('card-template', { description: this.description }, 'li');
- 	if(description.length > 30) {
+ 	if(description.length > 25) {
       	 this.element.querySelector('.card').classList.add("green");
       }
-  	if(description.length > 50) {
+  	if(description.length > 35) {
   	 this.element.querySelector('.card').classList.add("blue");
   }
   this.element.querySelector('.card').addEventListener('click', function (event) {
@@ -131,13 +131,13 @@ board.addColumn(doneColumn);
 
 // CREATING CARDS
 var card1 = new Card('New task');
-var card2 = new Card('Create kanban boards');
-var card2 = new Card('Kokodżambo');
+var card2 = new Card('Well');
+var card3 = new Card('Whatever');
 
 // ADDING CARDS TO COLUMNS
 todoColumn.addCard(card1);
 doingColumn.addCard(card2);
-
+doneColumn.addCard(card3);
 
 
 });

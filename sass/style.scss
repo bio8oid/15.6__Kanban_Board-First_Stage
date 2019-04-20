@@ -101,6 +101,8 @@ body {
 		list-style: none;
 		margin: 0;
 		padding:0;
+		width:100%;
+		min-height:100px;
 	}
 }
 
@@ -127,6 +129,7 @@ body {
 	margin: 20px;
 	text-align: center;
 	color: $deep-burgund;
+	font-size: 22px;
 }
 
 
